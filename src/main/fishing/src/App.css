@@ -1,0 +1,69 @@
+/* 기본 스타일 */
+.App {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 20px;
+  background-color: #f3f3f3;
+  position: relative;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+.card {
+  background-color: #6495ED;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+}
+.card button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  font-size: 0.9em;
+  cursor: pointer;
+  background-color: white;
+  color: #6495ED;
+  border: none;
+  border-radius: 4px;
+}
+
+/* 지도 패널 스타일 */
+.map-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+.map-panel h2 {
+  margin-top: 0;
+}
+.map-panel.open {
+  transform: translateX(0);
+}
+.close-btn {
+  background: #ff5b5b;
+  color: white;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
